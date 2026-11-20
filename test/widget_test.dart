@@ -1,11 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'package:habit_tracker/providers/theme_provider.dart';
 import 'package:habit_tracker/theme/app_theme.dart';
 import 'package:habit_tracker/widgets/today_progress_header.dart';
 import 'package:habit_tracker/widgets/empty_state.dart';
 
 void main() {
+  TestWidgetsFlutterBinding.ensureInitialized();
+  SharedPreferences.setMockInitialValues({});
+
   group('TodayProgressHeader widget tests', () {
     testWidgets('Shows greeting text', (tester) async {
       await tester.pumpWidget(MaterialApp(
@@ -57,13 +61,19 @@ void main() {
   });
 
   group('ThemeProvider tests', () {
-    test('Default theme mode is system', () {
+    setUp(() {
+      SharedPreferences.setMockInitialValues({});
+    });
+
+    test('Default theme mode is system', () async {
       final provider = ThemeProvider();
+      await Future.delayed(Duration.zero);
       expect(provider.themeMode, equals(ThemeMode.system));
     });
 
-    test('isDark returns false for system/light', () {
+    test('isDark returns false for system/light', () async {
       final provider = ThemeProvider();
+      await Future.delayed(Duration.zero);
       expect(provider.isDark, isFalse);
     });
   });
