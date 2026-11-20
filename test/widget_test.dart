@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:habit_tracker/models/habit.dart';
 import 'package:habit_tracker/providers/theme_provider.dart';
 import 'package:habit_tracker/theme/app_theme.dart';
 import 'package:habit_tracker/widgets/today_progress_header.dart';

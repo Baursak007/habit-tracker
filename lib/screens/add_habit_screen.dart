@@ -199,7 +199,7 @@ class _AddHabitScreenState extends State<AddHabitScreen> {
                 child: Container(
                   width: 48, height: 48,
                   decoration: BoxDecoration(
-                    color: _icon == ic ? _color : colorScheme.surfaceVariant,
+                    color: _icon == ic ? _color : colorScheme.surfaceContainerHighest,
                     borderRadius: BorderRadius.circular(12),
                   ),
                   child: Icon(ic, color: _icon == ic ? Colors.white : colorScheme.onSurfaceVariant),

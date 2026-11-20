@@ -33,6 +33,7 @@ class HabitCard extends StatelessWidget {
               icon: Icons.edit,
               label: 'Изменить',
               borderRadius: const BorderRadius.only(topLeft: Radius.circular(16), bottomLeft: Radius.circular(16)),
+              autoClose: true,
             ),
           ],
         ),
@@ -114,7 +115,7 @@ class HabitCard extends StatelessWidget {
     showModalBottomSheet(
       context: context,
       isScrollControlled: true,
-      shape: const RoundedRectangleBorder(topLeft: Radius.circular(24), topRight: Radius.circular(24)),
+      shape: const RoundedRectangleBorder(borderRadius: BorderRadius.vertical(top: Radius.circular(24))),
       builder: (_) => HabitDetailBottomSheet(habit: habit),
     );
   }

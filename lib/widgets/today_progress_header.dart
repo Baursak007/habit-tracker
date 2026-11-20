@@ -43,7 +43,7 @@ class TodayProgressHeader extends StatelessWidget {
             LinearPercentIndicator(
               lineHeight: 10,
               percent: progress.clamp(0, 1),
-              backgroundColor: colorScheme.surfaceVariant,
+              backgroundColor: colorScheme.surfaceContainerHighest,
               progressColor: progress == 1.0 ? Colors.green : colorScheme.primary,
               barRadius: const Radius.circular(8),
               padding: EdgeInsets.zero,

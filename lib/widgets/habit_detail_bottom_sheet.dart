@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
 import 'package:percent_indicator/percent_indicator.dart';
 import '../models/habit.dart';
-import '../providers/habit_provider.dart';
 import '../screens/add_habit_screen.dart';
 
 class HabitDetailBottomSheet extends StatelessWidget {
@@ -11,7 +9,6 @@ class HabitDetailBottomSheet extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final provider = context.read<HabitProvider>();
     final colorScheme = Theme.of(context).colorScheme;
 
     return DraggableScrollableSheet(

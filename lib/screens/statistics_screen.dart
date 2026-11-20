@@ -12,7 +12,6 @@ class StatisticsScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final provider = context.watch<HabitProvider>();
     final habits = provider.allHabits;
-    final colorScheme = Theme.of(context).colorScheme;
 
     return Scaffold(
       appBar: AppBar(
